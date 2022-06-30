@@ -1,0 +1,7 @@
+﻿@*  so this used to import all viewmodels instead of adding in view *@
+@using OnlineShop.ViewModel;
+@using OnlineShop.Model;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* in order to register custom tag helper - your project solution ->foldername-> all tag helper inside that folder *@
+@addTagHelper OnlineShop.CustomTagHelpers.*,OnlineShop

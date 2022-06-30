@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210713160231_orderTable.cs" />
+    <Compile Remove="Migrations\20210713160231_orderTable.Designer.cs" />
+    <Compile Remove="Migrations\20210713160355_AddedNew.cs" />
+    <Compile Remove="Migrations\20210713160355_AddedNew.Designer.cs" />
+    <Compile Remove="Migrations\20210715162703_IdentityPackageAdded.cs" />
+    <Compile Remove="Migrations\20210715162703_IdentityPackageAdded.Designer.cs" />
+    <Compile Remove="Migrations\20210715212018_adduserIdtoShopingCART.cs" />
+    <Compile Remove="Migrations\20210715212018_adduserIdtoShopingCART.Designer.cs" />
+    <Compile Remove="Migrations\20210715212919_AddidentityandNewColumn.cs" />
+    <Compile Remove="Migrations\20210715212919_AddidentityandNewColumn.Designer.cs" />
+    <Compile Remove="Migrations\20210715213113_newchnages.cs" />
+    <Compile Remove="Migrations\20210715213113_newchnages.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+</Project>

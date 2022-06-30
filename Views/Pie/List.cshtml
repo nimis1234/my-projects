@@ -1,0 +1,48 @@
+﻿@model PieListViewmodel;
+@*@model  OnlineShop.ViewModel.PieListViewmodel*
+        instead of using this statment, you can import the viewImport
+        @
+
+    @*model is ienumerbale*@
+@*<!DOCTYPE html>
+        since we are using _Layout we can put shared html code inside Layout
+    <html lang="en">
+    <head>
+        <title>OnlineShop</title>
+    </head>*@
+@*<body>*@
+@*<h1>@ViewBag.CurrentCategory</h1>
+    <h3>@ViewBag.message</h3>
+        since we are using viewmodel we dont want to show viewbag  *@
+<h1>@Model.CurrentCategory</h1>
+
+@*@foreach (var pie in Model.pies)
+    {
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@pie.ImageThumbnailUrl" alt="">
+            <div class="caption">
+                <h3 class="pull-right">@pie.Price.ToString("c")</h3>
+                <h3>
+                    <a asp-controller="Pie" asp-action="Details" asp-route-id="@pie.PieId">@pie.Name</a>
+                </h3>
+                <p>@pie.ShortDescription</p>
+            </div>
+        </div>
+    </div>
+    }
+
+        reason to commentout is this code is used morethan one area so we can add this code to a
+        partial view . partial view is shared view that can be used in more than one view
+        partial view starts with _ symbol and normally placed in shared folder
+        sytsem first check whether view is avalible in controller folder , if not present then check in shared folder
+        see below code
+*@
+
+@foreach (var pie in Model.pies)
+{
+    <partial name="_PieCard" model="pie"/>
+}
+
+@*</body>
+    </html>*@
