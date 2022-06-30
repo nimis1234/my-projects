@@ -1,0 +1,89 @@
+branTo merge changes we use Git bash
+
+Commands for using Git Bash.
+-------------------------------
+
+suppose its you not create a respository 
+use  following command
+
+       git init   
+
+
+1.	Check the config: to verify the username and user email
+		Git config --list
+2.      Now change to c folder
+                cd /c/ccga_nimisha  (put space after cd----)
+
+
+3.	To clone develop branch: branch develop url
+	     Git clone --branch  develop https://github.com/nimishaccga/testdemo.git
+4.      Next change the floder (means change to the project folder)
+	      cd testrepo  
+
+5.    To check which branch we using and to check whether any changes needs to checkout
+              git status
+
+6.    To check all the branch
+
+
+	      git branch --all
+
+To see all branch 
+git branch -a
+7. To switch the branches ie to switch from master to develop or develop to master  use below command
+
+               git checkout develop
+
+                means switch to develop branch
+ 
+               git checkout master
+
+                 means switch to master branch
+
+8. if you add a new file 
+                  first add the file to  folder, then check the status by using  'git status' comment
+                   then use following command
+
+                   git add add1.txt
+
+9 check again the status and commit the changes
+
+       git status         
+       git commit -a -m "tfs item "
+
+10. once commited , push the changes to develop
+        git push origin develop
+
+
+-------------------------------------------
+
+now merge changes to main or master
+
+Step 1 : find out the commit id number from develop branch using following command line
+                           git log --oneline
+step 2 : switch to master and apply cherry-pick
+
+                         git checkout master (mean switch to master)
+
+         we are using cherry pick functionality that means picking the number which has to commit
+                          git cherry-pick commitnumber
+                          ie  stat
+
+
+step 2.1 commit the changes
+       git commit -a -m "tfs item "
+  
+step3 : git push to master
+                          git push origin master
+
+
+
+use exit command to exit from comment
+"exit"
+
+fyi
+sometimes when you do cherry pick , may shows the conflict like file is not added , so what to do is 
+ git add filename
+
+
+
