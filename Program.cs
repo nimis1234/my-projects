@@ -13,6 +13,7 @@ namespace OnlineShop
     {
         public static void Main(string[] args)
         {
+            // start point
             CreateHostBuilder(args).Build().Run();
         }
 
